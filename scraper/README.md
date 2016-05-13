@@ -1,6 +1,6 @@
 # Scraper
 
-it needs ruby
+it needs ruby and mecab
 
 ```sh
 $ bundle install --path vendor/bundle -j4
