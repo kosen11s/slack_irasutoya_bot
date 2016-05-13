@@ -4,5 +4,6 @@ it needs ruby
 
 ```sh
 $ bundle install --path vendor/bundle -j4
-$ ruby fetch.rb # generates images.json
+$ bundle exec ruby fetch.rb > images.json
+$ cat images.json > bundle exec ruby translocation.rb > dic.json
 ```
