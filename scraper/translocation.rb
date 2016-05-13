@@ -7,7 +7,9 @@ images.map! do |image|
   words = image['categories']
   [image['title'], image['description']].each do |sentence|
     Natto::MeCab.new.parse(sentence) do |n|
-      words << n.surface if n.feature =~ /^名詞/
+      if n.feature =~ /^名詞/ && n.surface.length > 1
+        words << n.surface
+      end
     end
   end
 
